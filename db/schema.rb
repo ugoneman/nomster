@@ -31,8 +31,7 @@ ActiveRecord::Schema.define(version: 2019_04_23_031732) do
     t.integer "place_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["caption", "place_id"], name: "index_photos_on_caption_and_place_id"
-    t.index ["caption"], name: "index_photos_on_caption"
+    t.index ["place_id"], name: "index_photos_on_place_id"
   end
 
   create_table "places", force: :cascade do |t|
