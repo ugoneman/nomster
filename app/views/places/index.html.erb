@@ -1,3 +1,17 @@
+<div class="booyah-box col-10 offset-1">
+  <% @place.photos.each do |photo| %>
+    <div class="col-6 offset-1">
+      
+        <% if photo.present? %>
+          <%= image_tag photo.picture.to_s %>
+          <%= photo.caption %>
+        <% end %>
+      
+    </div>
+  <% end %>
+</div>
+
+
 <% @places.each do |place| %>
   <div class="booyah-box col-10 offset-1">
     <h1><%= link_to place.name, place_path(place) %></h1>
