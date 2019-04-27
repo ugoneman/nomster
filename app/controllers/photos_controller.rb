@@ -7,7 +7,11 @@ class PhotosController < ApplicationController
     redirect_to place_path(@place)
   end
 
-  
+  def show
+    @photo = Photo.new
+  end
+
+
   private
 
   def photo_params
