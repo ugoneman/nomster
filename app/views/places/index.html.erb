@@ -7,7 +7,9 @@
       <h1><%= place.photos.first.caption %></h1>
     <% end %>
   </div>  
+<% end %>
 
+<% @places.each do |place| %>
   <div class="booyah-box col-12">
     
     <h1><%= link_to place.name, place_path(place) %></h1>
